@@ -1,0 +1,4 @@
+displayName = Dynamic Lights
+author = Lafiel
+version = 1.0
+includeSource = true
