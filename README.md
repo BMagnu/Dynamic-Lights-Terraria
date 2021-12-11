@@ -4,7 +4,9 @@ This is a mod for Terraria 1.4, meant to add basic dynamic casting of lights and
 <details>
   <summary>Screenshots</summary>
   
-  
+  ![Screenshot](https://i.imgur.com/0bhX5eF.png)
+  ![Screenshot](https://i.imgur.com/dAtKZRi.png)
+  ![Screenshot](https://i.imgur.com/acOI6Bi.png)
 </details>
 
 This mod is inspired by Yiyang233's Lights & Shadow mod, just taking it a step further.

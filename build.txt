@@ -1,4 +1,5 @@
 displayName = Dynamic Lights
 author = Lafiel
+homepage = https://github.com/BMagnu/Dynamic-Lights-Terraria/
 version = 1.0
 includeSource = true
