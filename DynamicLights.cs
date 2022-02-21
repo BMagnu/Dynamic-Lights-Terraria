@@ -224,7 +224,7 @@ namespace DynamicLights
 						if (tile == null)
 							continue;
 
-						if (!Main.tileLighted[tile.type])
+						if (!Main.tileLighted[tile.TileType])
 							continue;
 
 						Vector3 color;
