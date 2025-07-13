@@ -74,10 +74,10 @@ namespace DynamicLights
 			{
 				FancyLights = ModContent.Request<Effect>("DynamicLights/Effects/Lights", (AssetRequestMode)2).Value;
 			}
-			On.Terraria.Graphics.Effects.FilterManager.EndCapture += FilterManager_EndCapture;
-			On.Terraria.Graphics.Light.LightingEngine.AddLight += LightingEngine_AddLight;
-			On.Terraria.Graphics.Light.LightingEngine.ApplyPerFrameLights += LightingEngine_Clear;
-			On.Terraria.Main.LoadWorlds += Main_LoadWorlds;
+			Terraria.Graphics.Effects.On_FilterManager.EndCapture += FilterManager_EndCapture;
+			Terraria.Graphics.Light.On_LightingEngine.AddLight += LightingEngine_AddLight;
+			Terraria.Graphics.Light.On_LightingEngine.ApplyPerFrameLights += LightingEngine_Clear;
+			Terraria.On_Main.LoadWorlds += Main_LoadWorlds;
 			Main.OnResolutionChanged += Main_OnResolutionChanged;
 		}
 
@@ -91,11 +91,11 @@ namespace DynamicLights
 
 		public override void Unload()
 		{
-			On.Terraria.Graphics.Effects.FilterManager.EndCapture -= FilterManager_EndCapture;
-			On.Terraria.Main.LoadWorlds -= Main_LoadWorlds;
+			Terraria.Graphics.Effects.On_FilterManager.EndCapture -= FilterManager_EndCapture;
+			Terraria.On_Main.LoadWorlds -= Main_LoadWorlds;
 		}
 
-		private void Main_LoadWorlds(On.Terraria.Main.orig_LoadWorlds orig)
+		private void Main_LoadWorlds(Terraria.On_Main.orig_LoadWorlds orig)
 		{
 			orig();
 			if (screen == null)
@@ -130,7 +130,7 @@ namespace DynamicLights
 			}
 		}
 
-		private void LightingEngine_AddLight(On.Terraria.Graphics.Light.LightingEngine.orig_AddLight orig, LightingEngine self, int x, int y, Vector3 color)
+		private void LightingEngine_AddLight(Terraria.Graphics.Light.On_LightingEngine.orig_AddLight orig, LightingEngine self, int x, int y, Vector3 color)
 		{
 			orig(self, x, y, color);
 			if (use_lighting)
@@ -139,7 +139,7 @@ namespace DynamicLights
 			}
 		}
 
-		private void LightingEngine_Clear(On.Terraria.Graphics.Light.LightingEngine.orig_ApplyPerFrameLights orig, LightingEngine self)
+		private void LightingEngine_Clear(Terraria.Graphics.Light.On_LightingEngine.orig_ApplyPerFrameLights orig, LightingEngine self)
 		{
 			orig(self);
 			if (use_lighting)
@@ -148,7 +148,7 @@ namespace DynamicLights
 			}
 		}
 
-		private void FilterManager_EndCapture(On.Terraria.Graphics.Effects.FilterManager.orig_EndCapture orig, FilterManager self, RenderTarget2D finalTexture, RenderTarget2D screenTarget1, RenderTarget2D screenTarget2, Color clearColor)
+		private void FilterManager_EndCapture(Terraria.Graphics.Effects.On_FilterManager.orig_EndCapture orig, FilterManager self, RenderTarget2D finalTexture, RenderTarget2D screenTarget1, RenderTarget2D screenTarget2, Color clearColor)
 		{
 			GraphicsDevice graphicsDevice = Main.instance.GraphicsDevice;
 

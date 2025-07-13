@@ -1,0 +1,60 @@
+Configs: {
+	DynamicLightsConfig: {
+		DisplayName: Dynamic Lights Config
+
+		UseLighting: {
+			Label: Use Lighting
+			Tooltip: ""
+		}
+
+		ShadowRes: {
+			Label: Shadow Quality
+			Tooltip: ""
+		}
+
+		Cutoff: {
+			Label: Brightness Cutoff (helps performance)
+			Tooltip: ""
+		}
+
+		LightCap: {
+			Label: Maximum Light Cap (0 = no Limit)
+			Tooltip: ""
+		}
+
+		ShadowSmooth: {
+			Label: Shadow Smoothness
+			Tooltip: ""
+		}
+
+		DistanceMult: {
+			Label: Shine Distance
+			Tooltip: ""
+		}
+
+		DarkBrightness: {
+			Label: Darkest Brightness
+			Tooltip: ""
+		}
+
+		BrightBrightness: {
+			Label: Brightest Brightness
+			Tooltip: ""
+		}
+
+		GrowthBase: {
+			Label: Brightness Falloff
+			Tooltip: ""
+		}
+
+		IncreaseSurfaceLight: {
+			Label: Increase Surface Lighting
+			Tooltip: ""
+		}
+
+		ShowSun: {
+			Label: Show Sun
+			Tooltip: ""
+		}
+	}
+}
